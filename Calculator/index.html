@@ -31,8 +31,9 @@
     }
     .main-div input{
       padding: 1.4rem 2rem;
-      width: 14.2rem;
+      width: 15rem;
       margin-bottom: 1.5rem;
+      font-size: 2rem;
     }
     
     .row-1{
@@ -44,6 +45,8 @@
       color: white;
       outline: 2px solid white;
         }
+    
+        
   </style>
 </head>
 <body>
@@ -71,7 +74,16 @@
           <button id="one" value="1" class="btn">1</button>
           <button id="two" value="2" class="btn">2</button>
           <button id="three" value="3" class="btn">3</button>
-          <button id="equals" class="btn">=</button>
+          <button id="multiply" class="btn" value="*">*</button>
+      </div>
+      
+      <div class="button item-1">
+        <div class="row-1">
+          <button id="one" value="0" class="btn">0</button>
+          <button id="two" value="." class="btn">.</button>
+          <button id="clear" class="btn">C</button>
+          <button id="equals" class="btn ">=</button>
+
       </div>
       
       
@@ -87,6 +99,8 @@
         if(button.id === 'equals'){
           inputBox.value=eval(inputBox.value);
         }
+        else if (button.id === 'clear') {
+          inputBox.value = '';}
         else{
           inputBox.value += button.value;
         }
