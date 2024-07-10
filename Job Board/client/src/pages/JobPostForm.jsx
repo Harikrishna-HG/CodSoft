@@ -29,7 +29,8 @@ const JobPostForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto  p-8 rounded-lg shadow-md">
+    <div className="container bg-lime-400 p-4">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto  p-8 rounded-lg shadow-md  bg-lime-500">
       <h2 className="text-2xl font-bold mb-6 text-center">Post a Job</h2>
       <div className="mb-4">
         <label className="block text-gray-700">Title</label>
@@ -75,7 +76,6 @@ const JobPostForm = () => {
           value={job.skills} 
           onChange={handleChange} 
           required 
-          placeholder="Comma separated skills" 
           className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
       </div>
@@ -92,11 +92,12 @@ const JobPostForm = () => {
       </div>
       <button 
         type="submit" 
-        className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+        className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
       >
         Post Job
       </button>
     </form>
+    </div>
   );
 };
 
