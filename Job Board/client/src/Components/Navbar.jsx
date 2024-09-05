@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-lime-500">
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="logo">
-          <NavLink to="/" className="text-lg font-extrabold md:ml-6">JOB PORTAL</NavLink>
+          <NavLink to="/"><img src={./assets/logo.png}</NavLink>
         </div>
 
         {/* Desktop Navigation */}
