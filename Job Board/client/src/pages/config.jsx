@@ -1,13 +1,9 @@
 // src/config.js
-const dev = {
-  apiUrl: "http://localhost:5000/job-cards",
-};
 
-const prod = {
-  apiUrl: "https://your-deployed-server-url.com/job-cards",
-};
+  apiUrl: "https://jobboard-backend-l8h1.onrender.com/job-cards",
 
-const config = process.env.NODE_ENV === "development" ? dev : prod;
+
+const config = process.env.PORT && apiUrl;
 
 export default config;
 
