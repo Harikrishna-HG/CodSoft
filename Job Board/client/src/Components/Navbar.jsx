@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '.../public/logo.png';
+
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center p-4">
          <div className="logo">
           <NavLink to="/">
-            <img src={logo} alt="Logo" />
+    <h2 className="font-bold text-xl">Job Board</h2>
           </NavLink>
         </div>
         {/* Desktop Navigation */}
