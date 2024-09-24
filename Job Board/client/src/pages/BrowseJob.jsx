@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import config, { apiUrl } from './config';
-
+import { apiUrl } from './config'; // Import apiUrl directly
 
 const BrowseJob = () => {
   const [jobCards, setJobCards] = useState([]);
@@ -9,7 +8,7 @@ const BrowseJob = () => {
   useEffect(() => {
     const fetchJobCards = async () => {
       try {
-        const response = await axios.get(apiUrl);
+        const response = await axios.get(apiUrl); // Use apiUrl here
         setJobCards(response.data);
       } catch (error) {
         console.error('Error fetching job cards:', error);
@@ -26,7 +25,7 @@ const BrowseJob = () => {
 
   return (
     <div className="App">
-   <hr className="border-t-1 border-black" />
+      <hr className="border-t-1 border-black" />
       <div className="job-cards-container flex flex-wrap justify-center bg-lime-400 ">
         {jobCards.map((job) => (
           <div key={job._id} className="job-card bg-lime-500 leading-tight border border-black rounded-lg p-4 m-4 w-full md:w-1/3 lg:w-1/4 flex-grow-0 flex-shrink-0 sm:mx-6">
