@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,11 @@ function Navbar() {
   return (
     <nav className="bg-lime-500">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="logo">
-          <NavLink to="/"><img src={./assets/logo.png}</NavLink>
+         <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="Logo" />
+          </NavLink>
         </div>
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex md:space-x-4">
           <ul className="flex space-x-4">
